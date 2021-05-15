@@ -1,0 +1,24 @@
+<mapper namespace="com.spring.dao.UserDao">
+
+    <!--    statementId-->
+    <select id="selectOne" resultType="com.spring.pojo.User" parameterType="com.spring.pojo.User">
+        select * from "user" where "id"=#{id}
+    </select>
+
+    <select id="selectList" resultType="com.spring.pojo.User">
+        select * from "user"
+    </select>
+
+    <insert id="insert" parameterType="com.spring.pojo.User">
+        INSERT INTO "user"("id", "username", "password", "birthday") VALUES (#{id}, #{username}, #{password},
+        #{birthday})
+    </insert>
+
+    <update id="update" parameterType="com.spring.pojo.User">
+        UPDATE "user" SET username=#{username} WHERE "id"=#{id};
+    </update>
+
+    <delete id="delete" parameterType="com.spring.pojo.User">
+        DELETE FROM "user" WHERE "id"=#{id}
+    </delete>
+</mapper>

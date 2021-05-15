@@ -1,0 +1,6 @@
+<mapper namespace="Role">
+
+    <select id="selectOne" resultType="Role" parameterType="Role">select * from Role where id=?</select>
+
+    <select id="selectList" resultType="Role">select * from Role</select>
+</mapper>

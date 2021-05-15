@@ -1,0 +1,11 @@
+<configuration>
+    <dataSource>
+        <property name="driverClass" value="org.postgresql.Driver"/>
+        <property name="jdbcUrl" value="jdbc:postgresql://localhost:5432/user_center"/>
+        <property name="user" value="postgres"/>
+        <property name="password" value="123456"/>
+    </dataSource>
+    <!--    引入SQL配置-->
+    <mapper resource="userMapper.xml"/>
+    <mapper resource="roleMapper.xml"/>
+</configuration>

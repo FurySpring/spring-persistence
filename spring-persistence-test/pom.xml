@@ -5,17 +5,19 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.spring</groupId>
-    <artifactId>spring.persistence</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>spring.persistence.test</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>spring.persistence.core</module>
-        <module>spring-persistence-test</module>
-    </modules>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.spring</groupId>
+            <artifactId>spring.persistence.core</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

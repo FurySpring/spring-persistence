@@ -7,9 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-persistence-test" />
-        <module name="spring-persistence" />
+        <module name="spring.persistence.core" />
+        <module name="spring.persistence.test" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring-persistence-test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
