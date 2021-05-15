@@ -9,7 +9,10 @@ import spring.utils.ParameterMappingTokenHandler;
 
 import java.beans.PropertyDescriptor;
 import java.lang.reflect.Field;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -50,7 +53,7 @@ public class SimpleSqlExecutor implements SqlExecutor {
         return preparedStatement.executeUpdate();
     }
 
-    private PreparedStatement buildPreparedStatement(Configuration configuration, MappedStatement mappedStatement, Object... params) throws SQLException, ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
+    private PreparedStatement buildPreparedStatement(Configuration configuration, MappedStatement mappedStatement, Object... params) throws Exception {
         // 1.注册驱动，获取连接
         Connection connection = configuration.getDataSource().getConnection();
         // 2.获取SQL

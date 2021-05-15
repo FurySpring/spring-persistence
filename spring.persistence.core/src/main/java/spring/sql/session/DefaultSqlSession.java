@@ -87,7 +87,7 @@ public class DefaultSqlSession implements SqlSession {
                     case "delete":
                         return delete(statementId, args);
                 }
-                throw new IllegalAccessException("No such method: " + methodName);
+                throw new IllegalAccessException("The method is not currently supported: " + methodName);
             }
         });
 
